@@ -17,8 +17,8 @@
 /**
  * Strings for component 'auth_elcentra', language 'en'.
  *
- * @package   auth_none
- * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
+ * @package   auth_elcentra
+ * @copyright 2013 onwards Elcentra
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

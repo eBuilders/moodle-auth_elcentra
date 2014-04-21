@@ -162,6 +162,9 @@ class auth_plugin_elcentra extends auth_plugin_base {
     	if (!isset($config->twitterclientsecret)) {
     		$config->twitterclientsecret = '';
     	}
+    	if (!isset($config->vkclientsecret)) {
+    		$config->vkclientsecret = '';
+    	}
         if (!isset($config->add_code_mode)) {
             $config->add_code_mode = 'auto';
         }
@@ -195,6 +198,9 @@ class auth_plugin_elcentra extends auth_plugin_base {
     	if (!isset($config->twitterclientid)) {
     		$config->twitterclientid = '';
     	}
+    	if (!isset($config->vkclientid)) {
+    		$config->twitterclientid = '';
+    	}
         if (!isset($config->add_code_mode)) {
             $config->add_code_mode = 'auto';
         }
@@ -207,6 +213,8 @@ class auth_plugin_elcentra extends auth_plugin_base {
     	set_config('linkedinclientsecret',    $config->linkedinclientsecret,    'auth/elcentra');
     	set_config('twitterclientid',    $config->twitterclientid,    'auth/elcentra');
         set_config('twitterclientsecret',    $config->twitterclientsecret,    'auth/elcentra');
+        set_config('vkclientid',    $config->vkclientid,    'auth/elcentra');
+        set_config('vkclientsecret',    $config->vkclientsecret,    'auth/elcentra');
         set_config('add_code_mode',    $config->add_code_mode,    'auth/elcentra');
         return true;
     }
@@ -238,7 +246,7 @@ class auth_plugin_elcentra extends auth_plugin_base {
     	if (!$verified) {
     		throw new moodle_exception('emailaddressmustbeverified', 'auth_elcentra');
     	}
-    	
+    	 
     	// Prohibit login if email belongs to the prohibited domain
     	if ($err = email_is_not_allowed($email)) {
     		throw new moodle_exception($err);
@@ -290,6 +298,7 @@ class auth_plugin_elcentra extends auth_plugin_base {
  	<a href="{$CFG->wwwroot}/auth/elcentra/facebook_request.php"><img src="{$CFG->wwwroot}/auth/elcentra/img/facebook.png"></a> <br>
  	<a href="{$CFG->wwwroot}/auth/elcentra/twitter_request.php"><img src="{$CFG->wwwroot}/auth/elcentra/img/twitter.png"></a> <br>
  	<a href="{$CFG->wwwroot}/auth/elcentra/linkedin_request.php"><img src="{$CFG->wwwroot}/auth/elcentra/img/linkedin.png"></a>
+ 	<a href="{$CFG->wwwroot}/auth/elcentra/vk_request.php"><img src="{$CFG->wwwroot}/auth/elcentra/img/vk.png"></a>
  	</div>
  	<!-- Elcentra content ends -->
 HTML;

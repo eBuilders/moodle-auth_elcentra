@@ -42,6 +42,7 @@
  	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/facebook_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/facebook.png"></a> <br> 
  	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/twitter_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/twitter.png"></a> <br>
  	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/linkedin_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/linkedin.png"></a>
+ 	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/vk_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/vk.png"></a>
  	</div>
  	</center>
  	<!-- Elcentra content ends -->
@@ -279,6 +280,66 @@ HTML;
         ?>
     </td>
 </tr>
+
+<!-- VK API -->
+
+<tr>
+<td align="" colspan="3">
+<div class="box informationbox">
+<?php
+	echo "<center><b>";
+	print_string('vkclient_title','auth_elcentra');
+	echo "</b></center><br>";
+	print_string('vkclient_redirecturl','auth_elcentra');
+	echo $CFG->wwwroot."/auth/elcentra/vk_response.php";
+	echo "<br>";
+	print_string('vkclient_appurl','auth_elcentra');
+?>
+<a href="https://vkcom/dev" target="_blank">https://vkcom/dev</a>
+</div>
+</td>	
+</tr>
+<tr>
+	<td align="right"><label for="vkclientid"><?php print_string('vkclientid_text', 'auth_elcentra') ?>: </label></td>
+    <td>
+        <input name="vkclientid" id="vkclientid" type="text" size="30" value="<?php echo $config->vkclientid ?>" />
+        <?php
+
+        if (isset($err['vkclientid'])) {
+            echo $OUTPUT->error_text($err['vkclientid']);
+        }
+
+        ?>
+    </td>
+    <td>
+        <?php
+
+        print_string('vkclientid_description', 'auth_elcentra');
+
+        ?>
+    </td>
+</tr>
+<tr>
+	<td align="right"><label for="vkclientsecret"><?php print_string('vkclientsecret_text', 'auth_elcentra') ?>: </label></td>
+    <td>
+        <input name="vkclientsecret" id="vkclientsecret" type="text" size="30" value="<?php echo $config->vkclientsecret ?>" />
+        <?php
+
+        if (isset($err['vkclientsecret'])) {
+            echo $OUTPUT->error_text($err['vkclientsecret']);
+        }
+
+        ?>
+    </td>
+    <td>
+        <?php
+
+        print_string('vkclientsecret_description', 'auth_elcentra');
+
+        ?>
+    </td>
+</tr>
+
 <tr>
     <td align="" colspan="3">
         <div class="box informationbox">

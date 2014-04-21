@@ -49,12 +49,22 @@ $string['linkedinclient_redirecturl']="OAuth Authorized Callback (Redirect URI):
 $string['linkedinclient_appurl']="Registration URL : ";
 $string['linkedinclientsecret_text'] = "Linkedin Client Secret";
 $string['linkedinclientsecret_description'] = "Fill in your linkedin client secret obtained from app dashboard";
+
+
+$string['vkclientid_text'] = "VK Client ID";
+$string['vkclientid_description'] = "Fill in your VK client id obtained from your app console";
+$string['vkclient_redirecturl']="OAuth Authorized Callback (Redirect URI): ";
+$string['vkclient_appurl']="Registration URL : ";
+$string['vkclientsecret_text'] = "VK Client Secret";
+$string['vkclientsecret_description'] = "Fill in your VK client secret obtained from app dashboard";
+
 $string['copytext'] = "If you select manual method for adding buttons, Copy the text below and paste it in the login file of your layout";
 $string['title']="Moodle Regsitration";
 $string['googleclient_title']="Google API";
 $string['facebookclient_title']="Facebook API";
 $string['twitterclient_title']="Twitter API";
 $string['linkedinclient_title']="Linkedin API";
+$string['vkclient_title']="VK API";
 $string['add_code_mode_text']="How do you want to add the social login buttons";
 $string['add_code_mode_auto_text']="Automatic";
 $string['add_code_mode_manual_text']="Manual";

@@ -22,12 +22,25 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+require('../../config.php');
+require_once 'eblib/vk.php';
+require_once 'eblib/misc.php';
 
-$plugin->version   = 2014042100;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2011120500;        // Requires this Moodle version
-$plugin->component = 'auth_elcentra';       // Full name of the plugin (used for diagnostics)
-$plugin->maturity  = MATURITY_BETA;
-$plugin->cron      = 0;
-$plugin->dependencies = array();
-$plugin->release = '1.03';
+$conf = get_config("auth/elcentra");
+$vkConfig = array(
+		"app_id"=>$conf->vkclientid,
+		"app_secret"=>$conf->vkclientsecret,
+		"base_url"=>$conf->vk_base_url,
+		"token_access_url"=>$conf->vk_token_access_url,
+		"retrieval_url"=>$conf->vk_retrieval_url,
+		"scope"=>$conf->vk_scope
+		);
+
+
+if($vkConfig['app_id']=="" || $vkConfig['app_secret']=="") {
+	throw new moodle_exception("VK login is not configured. Contact admin");
+}
+
+$fbObject = new EbuildersVk();
+$fbObject->setConfig($vkConfig);
+$fbObject->sendAccessRequest();

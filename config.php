@@ -41,7 +41,7 @@
  	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/google_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/google.png"></a> <br>
  	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/facebook_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/facebook.png"></a> <br> 
  	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/twitter_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/twitter.png"></a> <br>
- 	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/linkedin_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/linkedin.png"></a>
+ 	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/linkedin_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/linkedin.png"></a> <br>
  	<a href="<?php echo $CFG->wwwroot ?>/auth/elcentra/vk_request.php"><img src="<?php echo $CFG->wwwroot ?>/auth/elcentra/img/vk.png"></a>
  	</div>
  	</center>

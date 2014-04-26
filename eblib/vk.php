@@ -32,11 +32,12 @@ class EbuildersVk {
 		global $vkConfig;
 		
 		$vkConfig = $this->config;
-		$buildUrl = $vkConfig['token_access_url'] ."?"; 
+		$buildUrl = $vkConfig['token_access_url'];
 		$buildUrl.="client_id=".trim($vkConfig['app_id']);
 		$buildUrl.="&client_secret=".trim($vkConfig['app_secret']);
 		$buildUrl.="&redirect_uri=".htmlspecialchars($this->URL);
 		$buildUrl.="&code=".$code;
+        echo $buildUrl;
 		$responseText = file_get_contents($buildUrl);
 		$responseArray = (array)json_decode($responseText);
 		if(!isset($responseArray['access_token'])) {

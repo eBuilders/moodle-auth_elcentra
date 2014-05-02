@@ -13,6 +13,11 @@
 Changelog
 ------------------------------------------------------------
 
+v1.1 (Build 2014043000)
+*******
+1. Inclusion of VK as additional login method.
+
+
 v1.02  (Build 2013112200)
 *******
 1. Code clean up

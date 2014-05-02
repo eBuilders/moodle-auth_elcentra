@@ -30,4 +30,4 @@ $plugin->component = 'auth_elcentra';       // Full name of the plugin (used for
 $plugin->maturity  = MATURITY_BETA;
 $plugin->cron      = 0;
 $plugin->dependencies = array();
-$plugin->release = '1.03';
+$plugin->release = '1.1';
